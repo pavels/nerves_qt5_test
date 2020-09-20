@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export MIX_TARGET=rpi3
+export MIX_ENV=prod
+
+mix deps.get
+mix nerves.precompile
+# mix firmware --verbose
+mix firmware.burn
